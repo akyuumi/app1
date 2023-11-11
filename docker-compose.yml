@@ -1,0 +1,44 @@
+version: "3"
+services:
+  fe:
+    container_name: app1-fe
+    build:
+      context: ./app1-fe
+      dockerfile: ./Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - API_URL=http://api:8000
+    volumes:
+      - ./app1-fe:/app/fe/
+  be:
+    container_name: app1-be
+    build:
+      context: ./app1-be
+      dockerfile: ./Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    environment:
+      - DB_HOST=db
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_NAME=postgres
+      - DB_PORT=5432
+    volumes:
+      - ./app1-be/:/app/be/
+  postgres:
+    container_name: app1-postgres
+    image: postgres:13
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
