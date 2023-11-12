@@ -1,7 +1,6 @@
+from app.domain.models import User
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.orm import sessionmaker
-from app.models import User
-from app.models import User
 from app.database import Base, DBConfig
 
 class UserDB(Base):

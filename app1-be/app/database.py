@@ -1,6 +1,5 @@
 import os
 from sqlalchemy.ext.declarative import declarative_base
-from app.models import User
 
 Base = declarative_base()
 
