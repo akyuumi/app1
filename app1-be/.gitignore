@@ -1,0 +1,15 @@
+# Pythonのコンパイル済みファイル
+*.pyc
+
+# Pythonのキャッシュディレクトリ
+__pycache__/
+
+# その他の一般的な除外ファイル（必要に応じて追加）
+*.log
+*.csv
+*.dat
+.DS_Store
+env/
+venv/
+.idea/
+*.swp

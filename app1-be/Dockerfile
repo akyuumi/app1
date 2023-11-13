@@ -5,6 +5,7 @@ WORKDIR /app/be/
 RUN pip install fastapi uvicorn
 RUN pip install sqlalchemy
 RUN pip install pyyaml
+RUN pip install psycopg2
 
 COPY ./ ./
 

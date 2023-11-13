@@ -1,6 +1,10 @@
 from app.usecases.test_usercase import read_test_usecase
 from app.usecases.user_usecase import read_user_usecase
 from fastapi import FastAPI, APIRouter
+import sys
+
+# キャッシュ生成無効
+sys.dont_write_bytecode = True
 
 app = FastAPI()
 router = APIRouter()
