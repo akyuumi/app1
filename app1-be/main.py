@@ -1,5 +1,5 @@
-from app.usecases.test_usercase import read_test_usecase
-from app.usecases.user_usecase import read_user_usecase
+from usecases.test_usercase import read_test_usecase
+from usecases.user_usecase import read_user_usecase
 from fastapi import FastAPI, APIRouter
 import sys
 

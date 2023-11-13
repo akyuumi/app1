@@ -1,7 +1,7 @@
-from app.dto.userdb_dto import UserDB
-from app.domain.user import User
+from config.database import DBConfig
+from dto.userdb_dto import UserDB
+from domain.user import User
 from sqlalchemy.orm import sessionmaker
-from app.database import Base, DBConfig
 
 def get_user_by_id(user_id: int) -> User:
     
