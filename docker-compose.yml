@@ -5,6 +5,7 @@ services:
     build:
       context: ./app1-fe
       dockerfile: ./Dockerfile
+    command: tail -f /dev/null
     ports:
       - "3000:3000"
     environment:
@@ -16,6 +17,7 @@ services:
     build:
       context: ./app1-be
       dockerfile: ./Dockerfile
+    command: tail -f /dev/null
     ports:
       - "8080:8080"
     depends_on:

@@ -1,7 +1,6 @@
-# ビルドステージ
-FROM node:18 AS build-stage
+FROM node:16
 WORKDIR /app/fe
 COPY ./package*.json ./
 RUN npm install
 COPY ./ ./
-#RUN npm run build
+
