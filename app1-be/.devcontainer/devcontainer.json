@@ -1,8 +1,12 @@
 {
   "name": "app1-be",
-  "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash"
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python", "mhutchie.git-graph", "donjayamanne.githistory", "eamodio.gitlens","ms-azuretools.vscode-docker"],
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      }
+    }
   },
-  "extensions": ["ms-python.python", "ms-azuretools.vscode-docker"],
-  "forwardPorts": [8080],
+  "forwardPorts": [8080]
 }

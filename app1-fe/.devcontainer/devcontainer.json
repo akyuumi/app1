@@ -1,0 +1,13 @@
+{
+    "name": "app1-be",
+    "customizations": {
+      "vscode": {
+        "extensions": ["mhutchie.git-graph", "donjayamanne.githistory", "eamodio.gitlens","ms-azuretools.vscode-docker"],
+        "settings": {
+          "terminal.integrated.shell.linux": "/bin/bash"
+        }
+      }
+    },
+    "forwardPorts": [8080]
+  }
+  

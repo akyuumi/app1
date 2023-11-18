@@ -6,7 +6,8 @@ RUN pip install fastapi uvicorn
 RUN pip install sqlalchemy
 RUN pip install pyyaml
 RUN pip install psycopg2
+RUN pip install python-jose
 
 COPY ./ ./
 
-#CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
+#CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]う
